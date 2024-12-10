@@ -45,7 +45,7 @@ export async function Hero() {
                     <Button variant={"outline"}
                     className="absolute top-[50%] left-[15%] bg-zinc-600 opacity-90 hover:bg-zinc-700 hover:opacity-100">
                         <MapPinCheckInside className="h-4 w-4 text-white" />
-                        <Link href="/" className="text-white text-lg">Casas</Link>
+                        <Link href="/House" className="text-white text-lg">Casas</Link>
                     </Button>
 
                     <Button variant={"outline"}
