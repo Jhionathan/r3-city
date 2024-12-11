@@ -6,7 +6,7 @@ export default function House() {
     return (
         <Container>
             <div className="min-h-screen flex flex-col items-center w-full">
-                <div className="my-32">
+                <div className="my-24">
                     <h2 className="text-4xl font-normal">Casa</h2>
                 </div>
                 <div className="grid grid-cols-3 gap-4">
@@ -23,7 +23,7 @@ export default function House() {
 
                     <CardUse title="Area de Servico" image="/house/serviceroom/service.webp" href="/House/ServiceRoom" />
 
-                    <CardUse title="Fachada" image="/house/facade/fachada.webp" href="/House/Facede" />
+                    <CardUse title="Fachada" image="/house/facade/fachada.webp" href="/House/Facade" />
 
                     <CardUse title="Cozinha" image="/house/kitchen/cozinha.webp" href="/House/Kitchen" />
 
