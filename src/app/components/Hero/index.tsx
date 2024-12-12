@@ -29,7 +29,7 @@ export default function Hero() {
 
                     <ButtonUse title="Universidade" href="/" className="absolute bottom-[70%] right-[37%]" />
 
-                    <ButtonUse title="Pós Obra" href="/" className="absolute bottom-[70%] right-[48%]" />
+                    <ButtonUse title="Prédio em Obras" href="/Building" className="absolute bottom-[70%] right-[48%]" />
 
                     <ButtonUse title="Shopping" href="/" className="absolute bottom-[30%] right-[2%]" />
                 </div>

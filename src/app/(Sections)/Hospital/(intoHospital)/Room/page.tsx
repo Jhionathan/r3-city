@@ -14,6 +14,8 @@ export default function Room() {
                     <ButtonUse title="Poltrona" href="/House/Facade" className="bottom-[20%] left-[78%]" />
                     <ButtonUse title="Cama Paciente" href="/House/Facade" className="bottom-[30%] left-[50%]" />
                     <ButtonUse title="Piso" href="/House/Facade" className="bottom-[-5%] left-[80%]" />
+                    <ButtonUse title="Equipamentos" href="/House/Facade" className="bottom-[47%] left-[34%]" />
+                    <ButtonUse title="Movéis de Madeira" href="/House/Facade" className="bottom-[10%] left-[10%]" />
                 </div>
             </Container>
         </div>
