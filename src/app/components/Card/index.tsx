@@ -1,7 +1,10 @@
+'use client'
+
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
-
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 interface CardProps {
     title: string
@@ -9,9 +12,29 @@ interface CardProps {
     href: string
 }
 
-export default function CardUse({title, image, href}: CardProps) {
+export default function CardUse({ title, image, href }: CardProps) {
+
+    const cardRef = useRef(null);
+
+    useEffect(() => {
+        const card = cardRef.current
+
+        gsap.fromTo(card, {
+            x: 100,
+            opacity: 0,
+            duration: 1,
+            ease: "back.inOut",
+        }, {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            ease: "back.inOut",
+        }
+        )
+    }, [])
+
     return (
-        <Card>
+        <Card ref={cardRef}>
             <CardHeader>
                 <h3>{title}</h3>
             </CardHeader>

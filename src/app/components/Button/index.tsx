@@ -18,7 +18,7 @@ export default function ButtonUse({ title, href, className }: ButtonProps) {
     const buttonRef = useRef(null)
     useEffect(() => {
         gsap.fromTo(buttonRef.current, {
-            y: 100,
+            y: 30,
             opacity: 0,
             duration: 1,
             ease: "bounce.out",
