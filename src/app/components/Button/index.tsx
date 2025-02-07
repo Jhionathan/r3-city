@@ -18,21 +18,22 @@ export default function ButtonUse({ title, href, className }: ButtonProps) {
     const buttonRef = useRef(null)
     useEffect(() => {
         gsap.fromTo(buttonRef.current, {
-            y: 0,
-            x: 5,
-            opacity: 0,
+            y: 5,
+            x: 0,
+            opacity: 0.5,
             duration: 1,
-            ease: "bounce.out",
+            ease: "elastic",
 
         },
             {
                 y: 0,
                 x: 0,
                 opacity: 1,
-                duration: 1,
+                duration: 0.5,
                 ease: "bounce.out",
 
-            })
+            }
+        )
     })
 
     const buttonSpin = useRef(null)
@@ -40,12 +41,12 @@ export default function ButtonUse({ title, href, className }: ButtonProps) {
     useEffect(() => {
         gsap.fromTo(buttonSpin.current, {
             rotate: 0,
-            duration: 1,
+            duration: 5,
             ease: "bounce.out",
         },
             {
                 rotate: 360,
-                duration: 1,
+                duration: 5,
                 ease: "bounce.out",
             })
     })

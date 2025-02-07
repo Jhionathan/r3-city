@@ -18,9 +18,8 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
-import ButtonAlertDialog from "@/app/components/Button/ButtonAlertDialog"
 
 interface Card {
     id: number;
@@ -35,6 +34,14 @@ const prodcutsData: Record<string, Card[]> = {
         { id: 2923, title: "ENXAGUANTE BUCAL HALITO PURO 1 LITROS", },
         { id: 5317, title: "SABONETE LIQUIDO 5 LITROS ALL CLEAN ANTISSEPTICO", },
         { id: 5328, title: "DETERGENTE DESENGORDURANTE 5 LITROS ALCALINO INSPECTOS", },
+
+    ],
+    pia: [
+        { id: 4812, title: "SABONETE LIQUIDO 5 LITROS DESENGRAXANTE ALL CLEAN", },
+        { id: 4441, title: "SABONETE LIQUIDO REXONA S/FRANGANCIA 5 LITROS" },
+        { id: 4249, title: "ALCOOL GEL 500ML GIOVANNA BABY CLASS", },
+        { id: 5322, title: "DETERGENTE YPE 500ML NEUTRO", },
+        { id: 3160, title: "LIMPADOR MULTIUSO 500ML VEJA", },
 
     ],
     // pia: [
@@ -52,10 +59,14 @@ const prodcutsData: Record<string, Card[]> = {
 }
 
 
-
-
-
 export default function ServiceRoom() {
+
+    const [selectedOption, setSelectedOption] = useState<string | null>(null);
+    const handleOptionSelect = (area: string) => {
+        setSelectedOption(area);
+    }
+
+
     const burronRef = useRef(null)
     useEffect(() => {
         gsap.fromTo(burronRef.current, {
@@ -99,8 +110,10 @@ export default function ServiceRoom() {
                                 <div className="grid grid-cols-4 gap-4">
                                     {prodcutsData.porta.map((item) => (
                                         <div key={item.id} className="flex flex-col items-center gap-4">
+                                            <div className="h-[250px] overflow-hidden">
                                             <Image src={`https://r3suprimentos.agilecdn.com.br/${item.id}.jpg`} alt={item.title} width={250} height={250}
                                                 className="rounded-sm object-cover hover:scale-105 transition-all duration-500" />
+                                            </div>
                                             <CardTitle className="text-center font-normal">{item.title}</CardTitle>
                                         </div>
                                     ))}
@@ -112,22 +125,39 @@ export default function ServiceRoom() {
                             </AlertDialogContent>
                         </AlertDialog>
 
-
-
-                        <ButtonAlertDialog DialogTitle="Pia" DialogDescription="Com esses produtos vocé pode limpar a pia da sua casa." title="Pia" className="bottom-[35%] left-[47%]">
-                        <div className="grid grid-cols-4 gap-4">
-                                    {prodcutsData.porta.map((item) => (
+                        <AlertDialog>
+                            <AlertDialogTrigger asChild>
+                                <Button variant="outline"
+                                    ref={burronRef}
+                                    className="absolute bottom-[35%] left-[47%] text-white text-lg bg-zinc-600 opacity-90 hover:bg-zinc-700 hover:opacity-100 hover:text-white">
+                                    <MapPinCheckInside className="h-4 w-4 text-white" />
+                                    Pia</Button>
+                            </AlertDialogTrigger>
+                            <AlertDialogContent className="min-w-screen">
+                                <AlertDialogCancel className="absolute top-2 right-2"><X className="h-4 w-4" /></AlertDialogCancel>
+                                <AlertDialogHeader>
+                                    <AlertDialogTitle>Portas</AlertDialogTitle>
+                                    <AlertDialogDescription>
+                                        Com esses produtos você pode limpar a Pia da sua casa.
+                                    </AlertDialogDescription>
+                                </AlertDialogHeader>
+                                <div className="grid grid-cols-4 gap-4">
+                                    {prodcutsData.pia.map((item) => (
                                         <div key={item.id} className="flex flex-col items-center gap-4">
-                                            <Image src={`https://r3suprimentos.agilecdn.com.br/${item.id}.jpg`} alt={item.title} width={250} height={250}
-                                                className="rounded-sm object-cover hover:scale-105 transition-all duration-500" />
+                                            <div className="h-[250px] overflow-hidden">
+                                            <Image src={`https://r3suprimentos.agilecdn.com.br/${item.id}.jpg`} alt={item.title} width={250} height={250}                                               className="rounded-sm object-cover hover:scale-105 transition-all duration-500" />
+                                            </div>
                                             <CardTitle className="text-center font-normal">{item.title}</CardTitle>
                                         </div>
                                     ))}
                                 </div>
-                        </ButtonAlertDialog>
-
-
-
+                                <AlertDialogFooter>
+                                    <AlertDialogCancel>Voltar</AlertDialogCancel>
+                                    <AlertDialogAction><Link href="https://r3suprimentos.com.br/">Ir para o Site</Link></AlertDialogAction>
+                                </AlertDialogFooter>
+                            </AlertDialogContent>
+                        </AlertDialog>
+                        <Button variant="outline" onClick={() => handleOptionSelect("Porta")}></Button>
 
                         {/* <ButtonUse title="Porta" href="ServiceRoom" className="bottom-[20%] left-[22%]" /> */}
                         {/* <ButtonUse title="Pia" href="/House/ServiceRoom" className="bottom-[35%] left-[47%]" /> */}
@@ -141,8 +171,30 @@ export default function ServiceRoom() {
                     </div>
                 </Container>
             </div>
+            <div className="w-full h-full">
+                {selectedOption && prodcutsData[selectedOption] && (        
+                    <div className="p-6 bg-white">
+                        <div className="flex justify-between items-center mb-4">
+                            <h2 className="text-2xl font-bold">Produtos para {selectedOption}</h2>
+                            <Button 
+                                variant="ghost" 
+                                onClick={() => setSelectedOption(null)}
+                                className="hover:bg-gray-100"
+                            >
+                                <X className="h-6 w-6" />
+                            </Button>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {prodcutsData[selectedOption].map((product) => (
+                                <Card key={product.id} className="p-4 hover:shadow-lg transition-shadow">
+                                    <CardTitle className="text-lg">{product.title}</CardTitle>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
 
-
+                )}
+            </div>
         </>
     )
 }

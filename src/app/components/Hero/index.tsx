@@ -21,7 +21,7 @@ export default function Hero() {
 
                     <ButtonUse title="Hospitais" href="/Hospital" className="bottom-[83%] left-[38%]" />
 
-                    <ButtonUse title="Restaurante" href="/" className="bottom-[38%] left-[66%]" />
+                    <ButtonUse title="Restaurante" href="/Restaurant" className="bottom-[38%] left-[66%]" />
 
                     <ButtonUse title="Industria" href="/" className="top-[40%] left-[50%]" />
 
