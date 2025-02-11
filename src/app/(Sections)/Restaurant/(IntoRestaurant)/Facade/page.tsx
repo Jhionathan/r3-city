@@ -56,12 +56,12 @@ export default function BathRoom() {
                 className="w-full h-full object-cover" />
             <Container>
                 <div className="absolute w-full h-screen top-0 left-0">
-                    <ButtonUse title="Mesa e Cadeira" onClick={() => (handleButtonClick("mesa-cadeira-salao"))} className="bottom-[5%] left-[25%]" />
+                    <ButtonUse title="Mesa e Cadeira" onClick={() => (handleButtonClick("mesa-cadeira-fachada"))} className="bottom-[5%] left-[25%]" />
                     <ButtonUse title="Vidros" onClick={() => (handleButtonClick("vidro-fachada"))} className="bottom-[42%] left-[35%]"/>
                     <ButtonUse title="Calçada" onClick={() => (handleButtonClick("calcada-fachada"))} className="bottom-[-3%] left-[58%]"/>
                     <ButtonUse title="Porta" onClick={() => (handleButtonClick("porta-fachada"))} className="bottom-[5%] left-[48%]"/>
                     <ButtonUse title="Toldo" onClick={() => (handleButtonClick("toldo-fachada"))} className="bottom-[21%] left-[61%]"/>
-                    <ButtonUse title="Fachada" onClick={() => (handleButtonClick("toldo-fachada"))} className="bottom-[28%] left-[36%]"/>
+                    <ButtonUse title="Fachada" onClick={() => (handleButtonClick("fachada"))} className="bottom-[28%] left-[36%]"/>
 
                 </div>
                 <div className="w-full flex flex-col justify-center mb-14" ref={productsRef}>
