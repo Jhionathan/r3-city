@@ -52,25 +52,25 @@ export default function SalesRoom() {
     return (    
         <div className="min-h-screen relative">
             <Image
-                src="/restaurant/cozinha/cozind.png" height={1920} width={1080} alt="vitrine"
+                src="/restaurant/cozinha/cozinhaind.jpg" height={1920} width={1080} alt="vitrine"
                 className="w-full h-full object-cover" />
             <Container>
                 <div className="absolute w-full h-screen top-0 left-0">
-                    <ButtonUse title="Maquina de Lavar Louças" onClick={() => (handleButtonClick("maquina-lavar-loucas"))} className="bottom-[37%] left-[70%]" />
-                    <ButtonUse title="Higienização das Mãos" onClick={() => (handleButtonClick("higienizacao-maos"))} className="bottom-[40%] left-[80%]" />
-                    <ButtonUse title="Geladeiras" onClick={() => (handleButtonClick("geladeiras"))} className="bottom-[37%] left-[60%]" />
-                    <ButtonUse title="Prateleiras" onClick={() => (handleButtonClick("prateleiras"))} className="bottom-[45%] left-[10%]" />
-                    <ButtonUse title="Frutas, legumes e verduras das Mãos" onClick={() => (handleButtonClick("frutas-legumes-verduras"))} className="bottom-[25%] left-[10%]" />
-                    <ButtonUse title="Pia" onClick={() => (handleButtonClick("pia"))} className="bottom-[25%] left-[80%]"/>
-                    <ButtonUse title="Lixeira" onClick={() => (handleButtonClick("lixeira"))} className="bottom-[10%] left-[70%]" />
-                    <ButtonUse title="Maquinas" onClick={() => (handleButtonClick("maquinas"))} className="bottom-[35%] left-[25%]" /> 
+                    <ButtonUse title="Maquina de Lavar Louças" onClick={() => (handleButtonClick("maquina-lavar-loucas"))} className="bottom-[35%] left-[10%]" />
+                    <ButtonUse title="Higienização das Mãos" onClick={() => (handleButtonClick("higienizacao-maos"))} className="bottom-[52%] left-[60%]" />
+                    <ButtonUse title="Geladeiras" onClick={() => (handleButtonClick("geladeiras"))} className="bottom-[49%] left-[80%]" />
+                    <ButtonUse title="Prateleiras" onClick={() => (handleButtonClick("prateleiras"))} className="bottom-[56%] left-[30%]" />
+                    <ButtonUse title="Frutas, legumes e verduras das Mãos" onClick={() => (handleButtonClick("frutas-legumes-verduras"))} className="bottom-[39%] left-[20%]" />
+                    <ButtonUse title="Pia" onClick={() => (handleButtonClick("pia"))} className="bottom-[40%] left-[63%]"/>
+                    <ButtonUse title="Lixeira" onClick={() => (handleButtonClick("lixeira"))} className="bottom-[14%] left-[5%]" />
+                    <ButtonUse title="Maquinas" onClick={() => (handleButtonClick("maquinas"))} className="bottom-[45%] left-[20%]" /> 
                     <ButtonUse title="Louças" onClick={() => (handleButtonClick("loucas"))} className="bottom-[55%] left-[10%]" />
-                    <ButtonUse title="Fogão Industrial" onClick={() => (handleButtonClick("fogao-industrial"))} className="bottom-[29%] left-[50%]" />
+                    <ButtonUse title="Fogão Industrial" onClick={() => (handleButtonClick("fogao-industrial"))} className="bottom-[40%] left-[43%]" />
                     <ButtonUse title="Coifa" onClick={() => (handleButtonClick("coifa"))} className="bottom-[66%] left-[48%]" />
                     <ButtonUse title="Piso" onClick={() => (handleButtonClick("piso"))} className="bottom-[0%] left-[48%]" />
-                    <ButtonUse title="Azuleijo" onClick={() => (handleButtonClick("azuleijo"))} className="bottom-[60%] left-[24%]" />
+                    <ButtonUse title="Azuleijo" onClick={() => (handleButtonClick("azuleijo"))} className="bottom-[73%] left-[37%]" />
                 </div>
-                <div className="w-full flex flex-col justify-center" ref={productsRef}>
+                <div className="w-full flex flex-col justify-center mb-14" ref={productsRef}>
                     <div className="w-full flex items-center justify-center mt-10">
                     <h3 className="text-xl font-semibold capitalize">{selectedSection}</h3>
                     </div>

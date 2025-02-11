@@ -10,10 +10,11 @@ export default function House() {
                     <h2 className="text-4xl font-normal">Restaurante</h2>
                 </div>
                 <div className="grid grid-cols-3 gap-4">
-
-                    <CardUse title="Cozinha Industrial" image="/restaurant/cozinha/cozind.png" href="/Restaurant/IndustrialKitchen" />
-                    
-                    
+                    <CardUse title="Cozinha Industrial" image="/restaurant/cozinha/cozinhaind.jpg" href="/Restaurant/IndustrialKitchen" />
+                    <CardUse title="Sanitários" image="/restaurant/bathroom/bathroom.jpg" href="/Restaurant/BathRoom" />
+                    <CardUse title="Esterilização" image="/restaurant/esterilizacao/esterelizacao.jpg" href="/Restaurant/Esterilizacao" />
+                    <CardUse title="Salão" image="/restaurant/room/salao.jpg" href="/Restaurant/Room" />
+                    <CardUse title="Fachada" image="/restaurant/facade/fachada.jpg" href="/Restaurant/Facade" />
                 </div>
 
             </div>

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function SectionLayout({ children }: any) {
     return <>
-            <div className="h-24 w-full relative bg-slate-200 border-b border-solid border-red-300 flex">
+            <div className="h-20 w-full relative bg-gray-900 border-b border-solid border-red-300 flex">
             <Container>
                 <div className="w-full">        
                   <Link href="/">
