@@ -60,8 +60,8 @@ export default function Esterilizacao() {
                     <ButtonUse title="Diluidores" onClick={() => (handleButtonClick("diluidores"))} className="bottom-[35%] left-[75%]"/>
                     <ButtonUse title="Bancada" onClick={() => (handleButtonClick("bancada-esterilizacao"))} className="bottom-[25%] left-[25%]"/>
                     <ButtonUse title="Lixeira" onClick={() => (handleButtonClick("lixeira-esterilizacao"))} className="bottom-[16%] left-[89%]"/>
-                    <ButtonUse title="Piso" onClick={() => (handleButtonClick("piso-banheiro"))} className="bottom-[-3%] left-[48%]"/>
-                    <ButtonUse title="Azuleijo" onClick={() => (handleButtonClick("azuleiro-esterilizacao"))} className="bottom-[60%] left-[67%]"/>
+                    <ButtonUse title="Piso" onClick={() => (handleButtonClick("piso-esterilizacao"))} className="bottom-[-3%] left-[48%]"/>
+                    <ButtonUse title="Azuleijo" onClick={() => (handleButtonClick("azuleijo-esterilizacao"))} className="bottom-[60%] left-[67%]"/>
                     <ButtonUse title="Higigene das Mãos" onClick={() => (handleButtonClick("higiene-das-maos-esterilizacao"))} className="bottom-[45%] left-[7%]"/>
 
                 </div>
