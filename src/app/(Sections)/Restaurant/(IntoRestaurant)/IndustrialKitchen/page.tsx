@@ -74,7 +74,7 @@ export default function SalesRoom() {
                     <div className="w-full flex items-center justify-center mt-10">
                     <h3 className="text-xl font-semibold capitalize">{selectedSection}</h3>
                     </div>
-                    <div className="mt-10 grid grid-cols-6 gap-4 mx-auto my-auto">
+                    <div className="mt-10 grid gap-4 mx-auto my-auto sm:grid-cols-5">
                         {isLoading ? (
                             <div className="col-span-6 text-center">Carregando produtos...</div>
                         ) : products.length > 0 ? (
