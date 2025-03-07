@@ -8,7 +8,7 @@ export default function Butcher() {
     return (
         <div className="min-h-screen relative">
             <Image
-                src="/açougue-comp.webp" height={1920} width={1080} alt="acougue"
+                src="/supermarket/açougue-2.jpeg" height={1920} width={1080} alt="acougue"
                 className="w-full h-full object-cover" />
             <Container>
                 <div className="absolute w-full h-screen top-0 left-0">

@@ -1,6 +1,5 @@
 'use client'
 
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
@@ -51,16 +50,16 @@ export default function CardUse({ title, image, href }: CardProps) {
     })
 
     return (
-        <Card ref={cardRef}>
-            <CardHeader>
-                <h3>{title}</h3>
-            </CardHeader>
-            <CardContent>
+        <div ref={cardRef} className="border border-separate-gray-400 p-4 rounded-sm shadow-md flex flex-col gap-2">
+            <div className="text-center">
+                <p className="text-sm">{title}</p>
+            </div>
+            <div>
                 <Link href={href}>
-                    <Image src={image} alt={title} width={250} height={250} className="rounded-md" />
+                    <Image src={image} alt={title} width={250} height={250} className="rounded-sm hover:opacity-80 transition-all duration-700" />
                 </Link>
-            </CardContent>
-        </Card>
+            </div>
+        </div>
     )
 }
 

@@ -9,7 +9,7 @@ export default function Dml() {
     return (
         <div className="min-h-screen relative">
             <Image
-                src="/dml-comp.webp" height={1792} width={1024} alt="vitrine"
+                src="/supermarket/dml.jpeg" height={1792} width={1024} alt="vitrine"
                 className="w-full h-full object-contain" />
             <Container>
                 <div className="absolute w-full h-screen top-0 left-0">

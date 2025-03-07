@@ -11,7 +11,7 @@ export default function House() {
                 </div>
                 <div className="grid grid-cols-3 gap-4">
 
-                    <CardUse title="Banheiro" image="/house/bathroom/banheiro-2.webp" href="/House/Bathroom" />
+                    <CardUse title="Banheiro" image="/house/bathroom/bathroom.jpeg" href="/House/Bathroom" />
 
                     <CardUse title="Garagem" image="/house/garage/garagem-2.webp" href="/House/Garage" />
                     
@@ -21,13 +21,13 @@ export default function House() {
 
                     <CardUse title="Sala" image="/house/livingroom/sala-1.png" href="/House/LivingRoom" />
 
-                    <CardUse title="Area de Servico" image="/house/serviceroom/service.webp" href="/House/ServiceRoom" />
+                    <CardUse title="Area de Servico" image="/house/serviceroom/service.jpeg" href="/House/ServiceRoom" />
 
-                    <CardUse title="Fachada" image="/house/facade/fachada.webp" href="/House/Facade" />
+                    <CardUse title="Fachada" image="/house/facade/facade.jpeg" href="/House/Facade" />
 
-                    <CardUse title="Cozinha" image="/house/kitchen/cozinha.webp" href="/House/Kitchen" />
+                    <CardUse title="Cozinha" image="/house/kitchen/kitchen.jpeg" href="/House/Kitchen" />
 
-                    <CardUse title="Area de Lazer" image="/house/leisure/lazer.webp" href="/House/Lisure" />
+                    <CardUse title="Area de Lazer" image="/house/leisure/lazer.jpeg" href="/House/Lisure" />
 
                 </div>
 

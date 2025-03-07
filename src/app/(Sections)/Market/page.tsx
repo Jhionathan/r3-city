@@ -1,8 +1,5 @@
 import CardUse from "@/app/components/Card";
 import Container from "@/app/components/Container";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import Image from "next/image";
-import Link from "next/link";
 
 
 export default function Market() {
@@ -14,55 +11,9 @@ export default function Market() {
             </div>
             <div className="grid grid-cols-3 gap-4">
                 <CardUse title="Padaria" image="/supermarket/Padaria.jpg" href="/Market/Bakery"/>
-                <CardUse title="Açougue" image="/supermarket/Açougue.jpg" href="/Market/Butcher"/>
-                {/* <Card className="flex items-center flex-col">
-                    <CardHeader>
-                        <h3 className="text-center text-lg">Padaria</h3>
-                    </CardHeader>
-                    <CardContent>
-                        <Link href="/Market/Bakery"> 
-                            <Image src="/padaria.webp" alt="padaria" width={250} height={250}
-                            className="rounded-md"
-                            />
-                        </Link>
-                    </CardContent>
-                </Card>
-                <Card className="flex items-center flex-col">
-                    <CardHeader>
-                        <h3 className="text-center text-lg">Açougue</h3>
-                    </CardHeader>
-                    <CardContent>
-                        <Link href="/Market/Butcher">
-                            <Image src="/açougue.webp" alt="açougue" width={250} height={250}
-                            className="rounded-md"
-                            />
-                        </Link>
-                    </CardContent>
-                </Card>
-                <Card className="flex items-center flex-col">
-                    <CardHeader>
-                        <h3 className="text-center text-lg">Salão de Vendas</h3>
-                    </CardHeader>
-                    <CardContent>
-                        <Link href="/Market/SalesRoom">
-                            <Image src="/salao.webp" alt="hero" width={250} height={250}
-                            className="rounded-md"
-                            />
-                        </Link>
-                    </CardContent>
-                </Card>
-                <Card className="flex items-center flex-col">
-                    <CardHeader>
-                        <h3 className="text-center text-lg">DML</h3>
-                    </CardHeader>
-                    <CardContent>
-                        <Link href="/Market/Dml">
-                            <Image src="/DML.webp" alt="hero" width={250} height={250}
-                            className="rounded-md"
-                            />
-                        </Link>
-                    </CardContent>
-                </Card> */}
+                <CardUse title="Açougue" image="/supermarket/açougue-2.jpeg" href="/Market/Butcher"/>
+                <CardUse title="Salão de Vendas" image="/supermarket/room.jpeg" href="/Market/SalesRoom"/>
+                <CardUse title="DML" image="/supermarket/dml.jpeg" href="/Market/Dml"/>
             </div>
         </div>
        </Container>

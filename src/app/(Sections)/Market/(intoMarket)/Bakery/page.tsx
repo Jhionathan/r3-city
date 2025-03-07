@@ -8,7 +8,7 @@ export default function Bakery() {
     return (
         <div className="min-h-screen relative">
             <Image
-                src="/padaria-comp.webp" height={1920} width={1080} alt="padaria"
+                src="/supermarket/Padaria.jpg" height={1920} width={1080} alt="padaria"
                 className="w-full h-full object-cover" />
             <Container>
                 <div className="absolute w-full h-screen top-0 left-0">
