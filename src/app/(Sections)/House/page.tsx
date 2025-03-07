@@ -6,14 +6,14 @@ export default function House() {
     return (
         <Container>
             <div className="min-h-screen flex flex-col items-center w-full">
-                <div className="my-24">
+                <div className="my-12">
                     <h2 className="text-4xl font-normal">Casa</h2>
                 </div>
                 <div className="grid grid-cols-3 gap-4">
 
                     <CardUse title="Banheiro" image="/house/bathroom/bathroom.jpeg" href="/House/Bathroom" />
 
-                    <CardUse title="Garagem" image="/house/garage/garagem-2.webp" href="/House/Garage" />
+                    <CardUse title="Garagem" image="/house/garage/garage.jpeg" href="/House/Garage" />
                     
                     <CardUse title="Gourmet" image="/house/gourmet/gourmet.webp" href="/House/Gourmet" />
 
