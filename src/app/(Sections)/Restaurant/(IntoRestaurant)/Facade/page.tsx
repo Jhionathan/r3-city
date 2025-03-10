@@ -13,7 +13,7 @@ interface Product {
 }
 
 
-export default function BathRoom() {
+export default function Facade() {
     const [selectedSection, setSelectedSection] = useState("geladeiras")
     const [products, setProducts] = useState<Product[]>([])
     const [isLoading, setIsLoading] = useState(false)
@@ -105,5 +105,3 @@ export default function BathRoom() {
     )
 }
 
-
-// 
