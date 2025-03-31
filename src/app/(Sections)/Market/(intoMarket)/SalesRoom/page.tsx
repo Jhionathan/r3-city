@@ -9,7 +9,7 @@ export default function SalesRoom() {
     return (
         <div className="min-h-screen relative">
             <Image
-                src="/super-comp.webp" height={1920} width={1080} alt="vitrine"
+                src="/supermarket/room.jpeg" height={1920} width={1080} alt="vitrine" priority
                 className="w-full h-full object-cover" />
             <Container>
                 <div className="absolute w-full h-screen top-0 left-0">

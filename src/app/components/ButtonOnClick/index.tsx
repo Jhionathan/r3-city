@@ -36,13 +36,13 @@ export default function ButtonUse({ title, onClick, className }: ButtonProps) {
     useEffect(() => {
         gsap.fromTo(buttonSpin.current, 
             {
-                rotate: 0,
-                duration: 5,
+                x: 10,
+                duration: 1,
                 ease: "bounce.out",
             },
             {
-                rotate: 360,
-                duration: 5,
+                x: 0,
+                duration: 1,
                 ease: "bounce.out",
             }
         )

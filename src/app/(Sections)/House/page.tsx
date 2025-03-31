@@ -15,11 +15,11 @@ export default function House() {
 
                     <CardUse title="Garagem" image="/house/garage/garage.jpeg" href="/House/Garage" />
                     
-                    <CardUse title="Gourmet" image="/house/gourmet/gourmet.webp" href="/House/Gourmet" />
+                    <CardUse title="Gourmet" image="/house/gourmet/gourmet.png" href="/House/Gourmet" />
 
-                    <CardUse title="Quarto" image="/house/room/quarto-1.png" href="/House/Room" />
+                    <CardUse title="Quarto" image="/house/room/room.jpeg" href="/House/Room" />
 
-                    <CardUse title="Sala" image="/house/livingroom/sala-1.png" href="/House/LivingRoom" />
+                    <CardUse title="Sala" image="/house/livingroom/sala.jpeg" href="/House/LivingRoom" />
 
                     <CardUse title="Area de Servico" image="/house/serviceroom/service.jpeg" href="/House/ServiceRoom" />
 

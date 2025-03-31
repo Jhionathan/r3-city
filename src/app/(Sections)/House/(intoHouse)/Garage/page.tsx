@@ -58,43 +58,43 @@ export default function Garage() {
                     <ButtonUse title="Piso Aderente" onClick={() => (handleButtonClick("piso-aderente-garagem"))} className="bottom-[5%] left-[60%]" />
                     <ButtonUse title="Piso Rústico" onClick={() => (handleButtonClick("piso-rustico-garagem"))} className="bottom-[0%] left-[20%]" />
                 </div>
-            </Container>
-            <div className="w-full flex flex-col justify-center mb-14" ref={productsRef}>
-                <div className="w-full flex items-center justify-center mt-10">
-                    <h3 className="text-xl font-semibold capitalize">{selectedSection}</h3>
-                </div>
-                <div className="mt-10 grid grid-cols-6 gap-4 mx-auto my-auto">
-                    {isLoading ? (
-                        <div className="col-span-6 text-center">Carregando produtos...</div>
-                    ) : products.length > 0 ? (
-                        products.map((item) => (
-                            <div
-                                key={item.id}
-                                className="w-52 h-52 flex items-center justify-center gap-2 flex-col overflow-hidden border bg-white border-slate-200 p-1 rounded-md shadow-md"
-                            >
-                                <div className="h-36 overflow-hidden w-full flex items-center justify-center">
-                                    <Image
-                                        src={`https://r3suprimentos.agilecdn.com.br/${item.codprod}.jpg`}
-                                        alt={item.nome.toUpperCase()}
-                                        width={120}
-                                        height={120}
-                                        className="hover:scale-95 transition-all duration-500"
-                                    />
+                <div className="w-full flex flex-col justify-center mb-14" ref={productsRef}>
+                    <div className="w-full flex items-center justify-center mt-10">
+                        <h3 className="text-xl font-semibold capitalize">{selectedSection}</h3>
+                    </div>
+                    <div className="mt-10 grid grid-cols-6 gap-4 mx-auto my-auto">
+                        {isLoading ? (
+                            <div className="col-span-6 text-center">Carregando produtos...</div>
+                        ) : products.length > 0 ? (
+                            products.map((item) => (
+                                <div
+                                    key={item.id}
+                                    className="w-52 h-52 flex items-center justify-center gap-2 flex-col overflow-hidden border bg-white border-slate-200 p-1 rounded-md shadow-md"
+                                >
+                                    <div className="h-36 overflow-hidden w-full flex items-center justify-center">
+                                        <Image
+                                            src={`https://r3suprimentos.agilecdn.com.br/${item.codprod}.jpg`}
+                                            alt={item.nome.toUpperCase()}
+                                            width={120}
+                                            height={120}
+                                            className="hover:scale-95 transition-all duration-500"
+                                        />
+                                    </div>
+                                    <div className="h-14 w-full">
+                                        <p className="text-slate-600 text-xs font-mono text-center">
+                                            {item.nome.toUpperCase()}
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="h-14 w-full">
-                                    <p className="text-slate-600 text-xs font-mono text-center">
-                                        {item.nome.toUpperCase()}
-                                    </p>
-                                </div>
+                            ))
+                        ) : (
+                            <div className="col-span-6 text-center">
+                                Nenhum produto encontrado para esta categoria.
                             </div>
-                        ))
-                    ) : (
-                        <div className="col-span-6 text-center">
-                            Nenhum produto encontrado para esta categoria.
-                        </div>
-                    )}
+                        )}
+                    </div>
                 </div>
-            </div>
+            </Container>
         </div>
     )
 }
