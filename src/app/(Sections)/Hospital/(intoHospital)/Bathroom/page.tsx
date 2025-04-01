@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Bathroom() {
     return (
         <div className="min-h-screen relative">
-            <Image src="/hospital/bathroom/banheiro-hosp.webp" alt="banheiro" width={1920} height={1080} className="w-full h-full object-cover" />
+            <Image src="/hospital/hospitalbathroom.jpeg" alt="banheiro" width={1920} height={1080} className="w-full h-full object-cover" />
             <Container>
                 <div className="absolute w-full h-screen top-0 left-0">
                     <ButtonUse title="Azulejo" href="/Hospital/Bathroom" className="bottom-[45%] left-[10%]" />
