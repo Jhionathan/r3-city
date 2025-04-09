@@ -17,7 +17,7 @@ export default function Hero() {
                 <div className="absolute w-full h-screen top-0 left-0">
                     <ButtonUse title="Supermercado" href="/Market" className="bottom-[30%] left-[15%]" />
 
-                    <ButtonUse title="Hoteis" href="/Hoteis" className="top-[24%] left-[85%]" />
+                    <ButtonUse title="Hoteis" href="/Hotel" className="top-[24%] left-[85%]" />
 
                     <ButtonUse title="Hospitais" href="/Hospital" className="bottom-[80%] left-[24%]" />
 
