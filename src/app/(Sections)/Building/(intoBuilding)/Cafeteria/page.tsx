@@ -5,7 +5,7 @@ import ButtonUse from "@/app/components/Button";
 export default function Cafeteria() {
     return (
         <div className="min-h-screen relative">
-            <Image src="/building/cafeteria/cafeteria-obra.webp" alt="banheiro" width={1920} height={1080} className="w-full h-full object-cover" />
+            <Image src="/building/room.jpeg" alt="banheiro" width={1920} height={1080} className="w-full h-full object-cover" />
             <Container>
                 <div>
                     <ButtonUse title="Maquina de Cafe" href="/Building" className="bottom-[52%] left-[68%]" />

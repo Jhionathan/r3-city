@@ -1,0 +1,25 @@
+import CardUse from "@/app/components/Card";
+import Container from "@/app/components/Container";
+
+export default function Building() {
+    return (
+        <Container>
+            <div className="min-h-screen flex flex-col items-center w-full">
+                <div className="my-14">
+                    <h3 className="text-4xl font-normal">Indústria</h3>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                    <CardUse title="Banheiro" image="/industria/banheiro.jpeg" href="/Building/Bathroom" />
+                    <CardUse title="Cozinha" image="/industria/cozinha.jpeg" href="/Building/Cafeteria" />
+                    <CardUse title="Fachada" image="/industria/fachada.jpeg" href="/Building/Hall" />
+                    <CardUse title="Sala de Reunião" image="/industria/reuniao.jpeg" href="/Building/Elevator" />
+                    <CardUse title="Recepção" image="/industria/recepcao.jpeg" href="/Building/Front" />
+                    <CardUse title="Sala de Call Center" image="/industria/sac.jpeg" href="/Building/Parking" />
+                    <CardUse title="Área de Envase" image="/industria/prod.jpeg" href="/Building/Room" />
+                    <CardUse title="Área de Produção" image="/industria/producao.jpeg" href="/Building/Room" />
+
+                </div>
+            </div>
+        </Container>
+    )
+}

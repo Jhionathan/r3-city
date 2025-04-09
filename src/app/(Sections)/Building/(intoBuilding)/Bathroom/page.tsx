@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Bathroom() {
     return (
         <div className="min-h-screen relative">
-            <Image src="/building/bathroom/banheiro-obra.webp" alt="banheiro" width={1920} height={1080} className="w-full h-full object-cover"/>
+            <Image src="/building/bathroom.jpeg" alt="banheiro" width={1920} height={1080} className="w-full h-full object-cover"/>
             <Container>
                 <div className="absolute w-full h-screen top-0 left-0">
                     <ButtonUse title="Pia em Granito" href="/Building" className="absolute bottom-[28%] left-[25%]" />

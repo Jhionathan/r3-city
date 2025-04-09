@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Front() {
     return (
         <div className="min-h-screen relative">
-            <Image src="/building/hall/hall-obra.webp" alt="Recepção" width={1920} height={1080} className="w-full h-full object-cover" />
+            <Image src="/building/salao.jpeg" alt="Recepção" width={1920} height={1080} className="w-full h-full object-cover" />
             <Container>
                 <div className="abosolute w-full h-full top-0 left-0">
                     <ButtonUse title="Piso Marmore" href="/Building" className="bottom-[13%] left-[40%]" />

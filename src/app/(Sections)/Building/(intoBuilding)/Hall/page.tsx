@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Hall() {
     return (
         <div className="min-h-screen relative">
-            <Image src="/building/comercialhall/sala-comecial-obra.webp" alt="banheiro" width={1920} height={1080} className="w-full h-full object-cover" />
+            <Image src="/building/sala.jpeg" alt="banheiro" width={1920} height={1080} className="w-full h-full object-cover" />
             <Container>
                 <div className="abosolute w-full h-full top-0 left-0">
                     <ButtonUse title="Vidro" href="/Building" className="bottom-[66%] left-[20%]" />
