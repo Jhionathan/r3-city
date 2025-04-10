@@ -27,11 +27,11 @@ export default function Hero() {
 
                     <ButtonUse title="Casas" href="/House" className="top-[35%] left-[15%]" />
 
-                    <ButtonUse title="Universidade" href="/" className="absolute bottom-[78%] right-[27%]" />
+                    <ButtonUse title="Universidade" href="/University" className="absolute bottom-[78%] right-[27%]" />
 
                     <ButtonUse title="Prédio em Obras" href="/Building" className="absolute bottom-[67%] right-[43%]" />
 
-                    <ButtonUse title="Shopping" href="/" className="absolute bottom-[55%] right-[22%]" />
+                    <ButtonUse title="Shopping" href="/Shopping" className="absolute bottom-[55%] right-[22%]" />
                 </div>
             </Container>
         </div>
