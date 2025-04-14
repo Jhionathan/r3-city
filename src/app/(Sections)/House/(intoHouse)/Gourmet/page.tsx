@@ -14,7 +14,7 @@ interface Product {
 
 export default function Garage() {
 
-    const [selectedSection, setSelectedSection] = useState("movel-madeira-quarto")
+    const [selectedSection, setSelectedSection] = useState("churrasqueiro-gourmet")
     const [products, setProducts] = useState<Product[]>([])
     const [isLoading, setIsLoading] = useState(false)
     const productsRef = useRef<HTMLDivElement>(null)
