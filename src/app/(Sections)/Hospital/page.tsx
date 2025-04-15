@@ -6,7 +6,7 @@ export default function Hospital() {
     return (
             <Container>
                 <div className="min-h-screen flex flex-col items-center w-full">
-                    <div className="my-24">
+                    <div className="my-12">
                         <h3 className="text-4xl font-normal">Hospital</h3>
                     </div>
                     <div className="grid grid-cols-3 gap-4">
