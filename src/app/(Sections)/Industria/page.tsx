@@ -9,8 +9,8 @@ export default function Building() {
                     <h3 className="text-4xl font-normal">Indústria</h3>
                 </div>
                 <div className="grid grid-cols-3 gap-4">
-                    <CardUse title="Banheiro" image="/industria/banheiro.jpeg" href="/Building/Bathroom" />
-                    <CardUse title="Cozinha" image="/industria/cozinha.jpeg" href="/Building/Cafeteria" />
+                    <CardUse title="Banheiro" image="/industria/banheiro.jpeg" href="/Industria/Banheiro" />
+                    <CardUse title="Cozinha" image="/industria/cozinha.jpeg" href="/Industria/Cozinha" />
                     <CardUse title="Fachada" image="/industria/fachada.jpeg" href="/Building/Hall" />
                     <CardUse title="Sala de Reunião" image="/industria/reuniao.jpeg" href="/Building/Elevator" />
                     <CardUse title="Recepção" image="/industria/recepcao.jpeg" href="/Building/Front" />
