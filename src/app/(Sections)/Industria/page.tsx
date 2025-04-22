@@ -11,12 +11,12 @@ export default function Building() {
                 <div className="grid grid-cols-3 gap-4">
                     <CardUse title="Banheiro" image="/industria/banheiro.jpeg" href="/Industria/Banheiro" />
                     <CardUse title="Cozinha" image="/industria/cozinha.jpeg" href="/Industria/Cozinha" />
-                    <CardUse title="Fachada" image="/industria/fachada.jpeg" href="/Building/Hall" />
-                    <CardUse title="Sala de Reunião" image="/industria/reuniao.jpeg" href="/Building/Elevator" />
-                    <CardUse title="Recepção" image="/industria/recepcao.jpeg" href="/Building/Front" />
-                    <CardUse title="Sala de Call Center" image="/industria/sac.jpeg" href="/Building/Parking" />
-                    <CardUse title="Área de Envase" image="/industria/prod.jpeg" href="/Building/Room" />
-                    <CardUse title="Área de Produção" image="/industria/producao.jpeg" href="/Building/Room" />
+                    <CardUse title="Fachada" image="/industria/fachada.jpeg" href="/Industria/Fachada" />
+                    <CardUse title="Sala de Reunião" image="/industria/reuniao.jpeg" href="/Industria/SalaReuniao" />
+                    <CardUse title="Recepção" image="/industria/recepcao.jpeg" href="/Industria/Recepcao" />
+                    <CardUse title="Sala de Call Center" image="/industria/sac.jpeg" href="/Industria/CallCenter" />
+                    <CardUse title="Área de Envase" image="/industria/prod.jpeg" href="/Industria/Envase" />
+                    <CardUse title="Área de Produção" image="/industria/producao.jpeg" href="/Industria/Producao" />
 
                 </div>
             </div>
