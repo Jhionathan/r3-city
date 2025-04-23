@@ -9,7 +9,7 @@ export default function Building() {
                     <h3 className="text-4xl font-normal">Universidade</h3>
                 </div>
                 <div className="grid grid-cols-3 gap-4">
-                    <CardUse title="Praça de Alimentação" image="/shopping/alimentacao.jpeg" href="/Building/Bathroom" />
+                    <CardUse title="Praça de Alimentação" image="/shopping/alimentacao.jpeg" href="/Shopping/Praca" />
                     <CardUse title="Banheiro" image="/shopping/banheiro.jpeg" href="/Building/Cafeteria" />
                     <CardUse title="Cinema" image="/shopping/cinema.jpeg" href="/Building/Hall" />
                     <CardUse title="Corredores" image="/shopping/corredor.jpeg" href="/Building/Elevator" />
