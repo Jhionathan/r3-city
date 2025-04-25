@@ -14,7 +14,7 @@ interface Product {
 
 export default function Bathroom() {
 
-    const [selectedSection, setSelectedSection] = useState("fachada-alimentacao-shopping")
+    const [selectedSection, setSelectedSection] = useState("vidro-hall-shopping")
     const [products, setProducts] = useState<Product[]>([])
     const [isLoading, setIsLoading] = useState(false)
     const productsRef = useRef<HTMLDivElement>(null)
@@ -50,16 +50,17 @@ export default function Bathroom() {
 
     return (
         <div className="min-h-screen relative">
-            <Image src="/shopping/alimentacao.jpeg" alt="Praça de Alimentação" width={1920} height={1080}
+            <Image src="/shopping/hall.jpeg" alt="Hall Shopping" width={1920} height={1080}
                 className="w-full h-full object-cover" />
             <Container>
                 <div className="absolute w-full h-screen top-0 left-0">
-                    <ButtonUse title="Fachada" onClick={() => (handleButtonClick("fachada-alimentacao-shopping"))} className="bottom-[50%] left-[35%]" />
-                    <ButtonUse title="Equipamentos de Cozinha" onClick={() => (handleButtonClick("equipamentos-cozinha-alimentacao-shopping"))} className="bottom-[30%] left-[25%]" />
-                    {/* <ButtonUse title="Guarda Corpo" onClick={() => (handleButtonClick("guarda-corpo-alimentacao-shopping"))} className="bottom-[5%] left-[40%]" /> */}
-                    <ButtonUse title="Balcão" onClick={() => (handleButtonClick("balcao-alimentacao-shopping"))} className="bottom-[25%] left-[40%]" />
-                    <ButtonUse title="Mesas e cadeiras" onClick={() => (handleButtonClick("mesas-cadeiras-alimentacao-shopping"))} className="bottom-[25%] left-[85%]" />
-                    <ButtonUse title="Piso" onClick={() => (handleButtonClick("piso-alimentacao-shopping"))} className="bottom-[5%] left-[70%]" />
+                    <ButtonUse title="Vidro" onClick={() => (handleButtonClick("vidro-hall-shopping"))} className="bottom-[50%] left-[5%]" />
+                    <ButtonUse title="Ambiente" onClick={() => (handleButtonClick("ambiente-hall-shopping"))} className="bottom-[50%] left-[70%]" />
+                    <ButtonUse title="Caixas" onClick={() => (handleButtonClick("caixas-hall-shopping"))} className="bottom-[40%] left-[40%]" />
+                    <ButtonUse title="Caixa Eletrônico" onClick={() => (handleButtonClick("caixa-eletronico-hall-shopping"))} className="bottom-[35%] left-[85%]" />
+                    <ButtonUse title="Mesa de Madeira" onClick={() => (handleButtonClick("mesa-madeira-hall-shopping"))} className="bottom-[25%] left-[45%]" />
+                    <ButtonUse title="Sofá" onClick={() => (handleButtonClick("sofa-hall-shopping"))} className="bottom-[25%] left-[30%]" />
+                    <ButtonUse title="Piso" onClick={() => (handleButtonClick("piso-hall-shopping"))} className="bottom-[0%] left-[50%]" />
                 </div>
                 <div className="w-full flex flex-col justify-center mb-14" ref={productsRef}>
                     <div className="w-full flex items-center justify-center mt-10">

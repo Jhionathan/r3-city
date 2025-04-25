@@ -10,11 +10,11 @@ export default function Building() {
                 </div>
                 <div className="grid grid-cols-3 gap-4">
                     <CardUse title="Praça de Alimentação" image="/shopping/alimentacao.jpeg" href="/Shopping/Praca" />
-                    <CardUse title="Banheiro" image="/shopping/banheiro.jpeg" href="/Building/Cafeteria" />
-                    <CardUse title="Cinema" image="/shopping/cinema.jpeg" href="/Building/Hall" />
-                    <CardUse title="Corredores" image="/shopping/corredor.jpeg" href="/Building/Elevator" />
-                    <CardUse title="Fachada" image="/shopping/fachada.jpeg" href="/Building/Front" />
-                    <CardUse title="Hall" image="/shopping/hall.jpeg" href="/Building/Front" />
+                    <CardUse title="Banheiro" image="/shopping/banheiro.jpeg" href="/Shopping/Banheiro" />
+                    <CardUse title="Cinema" image="/shopping/cinema.jpeg" href="/Shopping/Cinema" />
+                    <CardUse title="Corredores" image="/shopping/corredor.jpeg" href="/Shopping/Corredores" />
+                    <CardUse title="Fachada" image="/shopping/fachada.jpeg" href="/Shopping/Fachada" />
+                    <CardUse title="Hall" image="/shopping/hall.jpeg" href="/Shopping/Hall" />
                 </div>
             </div>
         </Container>
