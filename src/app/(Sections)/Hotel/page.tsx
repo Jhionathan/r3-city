@@ -12,8 +12,8 @@ export default function Building() {
                     <CardUse title="Academia" image="/hotel/academia.jpeg" href="/Hotel/Academia" />
                     <CardUse title="Hall" image="/hotel/hall.jpeg" href="/Hotel/Hall" />
                     <CardUse title="Quarto de Hotel" image="/hotel/quarto.jpeg" href="/Hotel/Quarto" />
-                    <CardUse title="Restaurante" image="/hotel/restaurante.jpeg" href="/Building/Elevator" />
-                    <CardUse title="Salão" image="/hotel/salao.jpeg" href="/Building/Front" />
+                    <CardUse title="Restaurante" image="/hotel/restaurante.jpeg" href="/Hotel/Restaurante" />
+                    <CardUse title="Salão" image="/hotel/salao.jpeg" href="/Hotel/Salao" />
                 </div>
             </div>
         </Container>
