@@ -54,7 +54,7 @@ export default function Garage() {
                 className="w-full h-full object-cover" />
             <Container>
                 <div className="absolute w-full h-screen top-0 left-0">
-                    <ButtonUse title="Churrasqueira" onClick={() => (handleButtonClick("churrasqueiro-gourmet"))} className="bottom-[45%] left-[85%]" />
+                    <ButtonUse title="Churrasqueira" onClick={() => (handleButtonClick("churrasqueira-gourmet"))} className="bottom-[45%] left-[85%]" />
                     <ButtonUse title="Luminárias de vidro" onClick={() => (handleButtonClick("luminaria-vidro-gourmet"))} className="bottom-[65%] left-[25%]" />
                     <ButtonUse title="Pia Inox" onClick={() => (handleButtonClick("pia-inox-gourmet"))} className="bottom-[40%] left-[70%]" />
                     <ButtonUse title="Piso" onClick={() => (handleButtonClick("piso-gourmet"))} className="bottom-[5%] left-[60%]" />
