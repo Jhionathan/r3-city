@@ -62,7 +62,7 @@ export default function Bathroom() {
                     <ButtonUse title="Vaso Sanitario" onClick={() => (handleButtonClick("vaso-sanitario-banheiro-hospital"))} className="bottom-[25%] left-[70%]" />
                     <ButtonUse title="Divisorias de Vidros" onClick={() => (handleButtonClick("divisorias-vidro-banheiro-hospital"))} className="bottom-[55%] left-[80%]" />
                     <ButtonUse title="Higienização das Mãos" onClick={() => (handleButtonClick("higienizacao-maos-banheiro-hospital"))} className="bottom-[40%] left-[30%]" />
-                    <ButtonUse title="Limpeza de Dispensores" onClick={() => (handleButtonClick("limpeza-dispensores-banheiro-hospital"))} className="bottom-[45%] left-[65%]" />
+                    <ButtonUse title="Limpeza de Dispensores" onClick={() => (handleButtonClick("limpeza-dispensers-banheiro-hospital"))} className="bottom-[45%] left-[65%]" />
                 </div>
                 <div className="w-full flex flex-col justify-center mb-14" ref={productsRef}>
                     <div className="w-full flex items-center justify-center mt-10">
