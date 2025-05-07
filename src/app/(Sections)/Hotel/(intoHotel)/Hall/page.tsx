@@ -55,7 +55,7 @@ export default function Bathroom() {
             <Container>
                 <div className="absolute w-full h-screen top-0 left-0">
                     <ButtonUse title="Lustres" onClick={() => (handleButtonClick("lustre-hall-hotel"))} className="bottom-[80%] left-[40%]" />
-                    <ButtonUse title="Janela de Vidro" onClick={() => (handleButtonClick("lustr-hall-hotel"))} className="bottom-[50%] left-[75%]" />
+                    <ButtonUse title="Janela de Vidro" onClick={() => (handleButtonClick("janela-hall-hotel"))} className="bottom-[50%] left-[75%]" />
                     <ButtonUse title="Painel em Madeira" onClick={() => (handleButtonClick("painel-madeira-hall-hotel"))} className="bottom-[60%] left-[20%]" />
                     <ButtonUse title="Ambiente" onClick={() => (handleButtonClick("ambiente-hall-hotel"))} className="bottom-[30%] left-[50%]" />
                     <ButtonUse title="Balcão" onClick={() => (handleButtonClick("balcao-hall-hotel"))} className="bottom-[30%] left-[40%]" />
