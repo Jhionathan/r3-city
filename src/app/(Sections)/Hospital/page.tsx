@@ -1,6 +1,5 @@
 import CardUse from "@/app/components/Card";
 import Container from "@/app/components/Container";
-import Image from "next/image";
 
 export default function Hospital() {
     return (

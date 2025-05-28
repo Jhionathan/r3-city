@@ -6,7 +6,7 @@ export default function Building() {
         <Container>
             <div className="min-h-screen flex flex-col items-center w-full">
                 <div className="my-14">
-                    <h3 className="text-4xl font-normal">Universidade</h3>
+                    <h3 className="text-4xl font-normal">Shopping</h3>
                 </div>
                 <div className="grid grid-cols-3 gap-4">
                     <CardUse title="Praça de Alimentação" image="/shopping/alimentacao.jpeg" href="/Shopping/Praca" />

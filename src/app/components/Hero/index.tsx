@@ -1,8 +1,6 @@
 'use client';
 import Container from "../Container";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
 import ButtonUse from "../Button";
 
 export default function Hero() {

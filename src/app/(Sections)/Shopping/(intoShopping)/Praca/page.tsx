@@ -56,7 +56,6 @@ export default function Bathroom() {
                 <div className="absolute w-full h-screen top-0 left-0">
                     <ButtonUse title="Fachada" onClick={() => (handleButtonClick("fachada-alimentacao-shopping"))} className="bottom-[50%] left-[35%]" />
                     <ButtonUse title="Equipamentos de Cozinha" onClick={() => (handleButtonClick("equipamentos-cozinha-alimentacao-shopping"))} className="bottom-[30%] left-[25%]" />
-                    {/* <ButtonUse title="Guarda Corpo" onClick={() => (handleButtonClick("guarda-corpo-alimentacao-shopping"))} className="bottom-[5%] left-[40%]" /> */}
                     <ButtonUse title="Balcão" onClick={() => (handleButtonClick("balcao-alimentacao-shopping"))} className="bottom-[25%] left-[40%]" />
                     <ButtonUse title="Mesas e cadeiras" onClick={() => (handleButtonClick("mesas-cadeiras-alimentacao-shopping"))} className="bottom-[25%] left-[85%]" />
                     <ButtonUse title="Piso" onClick={() => (handleButtonClick("piso-alimentacao-shopping"))} className="bottom-[5%] left-[70%]" />
