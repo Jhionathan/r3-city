@@ -54,7 +54,7 @@ export default function CardUse({ title, image, href }: CardProps) {
             <div className="text-center">
                 <p className="text-sm">{title}</p>
             </div>
-            <div>
+            <div className="w-[280px] h-[280px]">
                 <Link href={href}>
                     <Image src={image} alt={title} width={250} height={250} className="rounded-sm hover:opacity-80 transition-all duration-700" />
                 </Link>
