@@ -50,11 +50,11 @@ export default function CardUse({ title, image, href }: CardProps) {
     })
 
     return (
-        <div ref={cardRef} className="border border-separate-gray-400 p-4 rounded-sm shadow-md flex flex-col gap-2">
+        <div ref={cardRef} className="border border-separate-gray-400 p-4 rounded-sm shadow-md flex flex-col gap-2 w-[250px]">
             <div className="text-center">
                 <p className="text-sm">{title}</p>
             </div>
-            <div className="w-[280px] h-[280px]">
+            <div>
                 <Link href={href}>
                     <Image src={image} alt={title} width={250} height={250} className="rounded-sm hover:opacity-80 transition-all duration-700" />
                 </Link>
