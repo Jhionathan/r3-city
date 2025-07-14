@@ -50,7 +50,7 @@ export default function Bathroom() {
 
     return (
         <div className="min-h-screen relative">
-            <Image src="/house/bathroom/bathroom-1.jpeg" alt="banheiro" width={1920} height={1080}
+            <Image src="/house/bathroom/bathroom.jpeg" alt="banheiro" width={1920} height={1080}
                 className="w-full h-full object-cover" />
             <Container>
                 <div className="absolute w-full h-screen top-0 left-0">
