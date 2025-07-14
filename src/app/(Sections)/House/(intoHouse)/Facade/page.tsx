@@ -14,7 +14,7 @@ interface Product {
 
 export default function Facade() {
 
-    const [selectedSection, setSelectedSection] = useState("limpeza-automotiva")
+    const [selectedSection, setSelectedSection] = useState("piso-entrada-casa")
     const [products, setProducts] = useState<Product[]>([])
     const [isLoading, setIsLoading] = useState(false)
     const productsRef = useRef<HTMLDivElement>(null)
