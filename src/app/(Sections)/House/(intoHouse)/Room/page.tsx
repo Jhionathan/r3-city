@@ -58,7 +58,7 @@ export default function Garage() {
                     <ButtonUse title="Comoda" onClick={() => (handleButtonClick("comoda-quarto"))} className="bottom-[40%] left-[10%]" />
                     <ButtonUse title="Movél de Madeira" onClick={() => (handleButtonClick("movel-madeira-quarto"))} className="bottom-[40%] left-[85%]" />
                     <ButtonUse title="Piso" onClick={() => (handleButtonClick("piso-quarto"))} className="bottom-[5%] left-[60%]" />
-                    <ButtonUse title="Janela" onClick={() => (handleButtonClick("janala-quarto"))} className="bottom-[60%] left-[80%]" />
+                    <ButtonUse title="Janela" onClick={() => (handleButtonClick("janela-quarto"))} className="bottom-[60%] left-[80%]" />
                 </div>
                 <div className="w-full flex flex-col justify-center mb-14" ref={productsRef}>
                     <div className="w-full flex items-center justify-center mt-10">
