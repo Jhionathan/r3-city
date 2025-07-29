@@ -74,7 +74,7 @@ export default function Bathroom() {
                                 >
                                     <div className="h-36 overflow-hidden w-full flex items-center justify-center">
                                         <Image
-                                            src={`https://r3suprimentos.agilecdn.com.br/${item.codprod}.jpg`}
+                                            src={`https://r3suprimentos.agilecdn.com.br/${item.codprod}_1.jpg`}
                                             alt={item.nome.toUpperCase()}
                                             width={120}
                                             height={120}

@@ -4,6 +4,7 @@ import Image from "next/image"
 import Container from "@/app/components/Container"
 import ButtonUse from "@/app/components/ButtonOnClick"
 import { useRef, useState, useEffect } from "react";
+import DescriptionSection from "@/app/components/DescriptionSection";
 
 interface Product {
     id: number
@@ -79,6 +80,7 @@ export default function Facade() {
                                             height={120}
                                             className="hover:scale-95 transition-all duration-500"
                                         />
+                                        {/* <DescriptionSection nome={item.nome} codprod={item.codprod} /> */}
                                     </div>
                                     <div className="h-14 w-full">
                                         <p className="text-slate-600 text-xs font-mono text-center">
