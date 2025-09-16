@@ -1,70 +1,26 @@
-import { cookies } from "next/headers";
+import { NextRequest } from "next/server";
+import getProductDetail from "@/lib/getProductDetail";
 
-interface LoginResponse {
-  accessToken: string;
-  refreshToken?: string;
-  expiresIn?: number;
-}
-
-export async function getWinToken(apiLogin: string, apiPassword: string): Promise<string | null> {
-  if (!apiLogin || !apiPassword) {
-    console.error('Credenciais de login não fornecidas');
-    return null;
-  }
-
-  const urlApi = process.env.API_LOGIN_URL;
-  if (!urlApi) {
-    console.error('URL da API não configurada');
-    return null;
-  }
-
+export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise<{ codigo: string }> }
+) {
   try {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 10000); 
-
-    const response = await fetch(urlApi, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ login: apiLogin, senha: apiPassword }),
-      signal: controller.signal,
-    });
-
-    clearTimeout(timeoutId);
-
-    if (!response.ok) {
-      const error = await response.json().catch(() => ({ message: 'Erro desconhecido' }));
-      console.error('Falha na autenticação:', response.status);
-      throw new Error(`Erro ${response.status}: ${error.message || 'Falha na autenticação'}`);
-    }
-
-    const data: LoginResponse = await response.json();
+    const { codigo } = await params;
     
-    if (!data.accessToken) {
-      throw new Error('Token não recebido da API');
+    if (!codigo) {
+      return Response.json({ error: "Código do produto é obrigatório" }, { status: 400 });
     }
 
-    const cookieStore = await cookies();
-    cookieStore.set('tokenWin', data.accessToken, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
-      maxAge: data.expiresIn || 3600, 
-      path: '/',
-    });
+    const product = await getProductDetail(codigo);
+    
+    if (!product) {
+      return Response.json({ error: "Produto não encontrado" }, { status: 404 });
+    }
 
-    console.log('Login realizado com sucesso');
-    return data.accessToken;
-
+    return Response.json(product);
   } catch (error) {
-    if (error instanceof Error) {
-      if (error.name === 'AbortError') {
-        console.error('Timeout na requisição de login');
-      } else {
-        console.error('Erro no processo de login:', error.message);
-      }
-    }
-    return null;
+    console.error("Erro na API de produto:", error);
+    return Response.json({ error: "Erro interno do servidor" }, { status: 500 });
   }
 }

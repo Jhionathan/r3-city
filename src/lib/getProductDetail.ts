@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import { getWinToken } from "./auth";
 
 interface ProductDetail {
   id: string;
@@ -9,52 +10,9 @@ const apiLogin = process.env.API_USERNAME;
 const apiPassword = process.env.API_PASSWORD;
 const API_PRODUCT_URL = process.env.API_PRODUCT_URL;
 
-export async function getWinToken(apiLogin: string, apiPassword: string): Promise<string | null> {
-  if (!apiLogin || !apiPassword) {
-    console.error('❌ Credenciais inválidas - API_USERNAME ou API_PASSWORD não definidos');
-    return null;
-  }
-
-  try {
-    const urlApi = process.env.API_LOGIN_URL;
-    if (!urlApi) {
-      console.error('❌ API_LOGIN_URL não configurada');
-      return null;
-    }
-
-    console.log('🔑 Fazendo login na API externa...');
-    console.log('📍 URL:', urlApi);
-    console.log('👤 Login:', apiLogin);
-
-    const response = await fetch(urlApi, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ login: apiLogin, senha: apiPassword }),
-    });
-
-    console.log('📡 Status da resposta de login:', response.status);
-
-    if (!response.ok) {
-      const error = await response.json().catch(() => ({}));
-      console.error("❌ Erro ao fazer login:", response.status, error);
-      return null;
-    }
-
-    const data = await response.json();
-    console.log('✅ Login realizado com sucesso');
-    console.log('🎫 Token recebido:', data.accessToken ? 'SIM' : 'NÃO');
-    
-    return data.accessToken ?? null;  
-  } catch (err) {
-    console.error("❌ Erro no login:", err);
-    return null;
-  }
-}
-
 export default async function getProductDetail(codprod: string): Promise<ProductDetail | null> {
   console.log(`📦 Iniciando busca do produto ${codprod}...`);
   
-  // Verifica se as variáveis estão definidas
   if (!apiLogin || !apiPassword || !API_PRODUCT_URL) {
     console.error('❌ Variáveis de ambiente não configuradas:');
     console.error('API_USERNAME:', apiLogin ? 'OK' : 'FALTANDO');
@@ -97,13 +55,13 @@ export default async function getProductDetail(codprod: string): Promise<Product
       const errorMsg = await response.text();
       console.error("❌ Erro ao buscar produto:", response.status, errorMsg);
       
-      // Se for 401 (token expirado), tenta fazer login novamente
+      
       if (response.status === 401) {
         console.log('🔄 Token expirado, tentando renovar...');
         winToken = await getWinToken(apiLogin, apiPassword);
         
         if (winToken) {
-          // Tenta novamente com novo token
+          
           const retryResponse = await fetch(`${API_PRODUCT_URL}/${codprod}`, {
             method: "GET",
             headers: {
