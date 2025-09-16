@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { getProductDetailsAction } from "@/lib/action";
 import getProductDetail from "../../../lib/getProductDetail";
+import ProductTechInfo from "../ProductTechInfo";
 
 interface ProductDetailsClientProps {
   codprod: string;
@@ -72,10 +73,11 @@ useEffect(() => {
 
   return (
     <div className="text-sm md:text-base">
-      <h3 className="text-lg font-bold mb-2">Informações Técnicas:</h3>
+      {/* <h3 className="text-lg font-bold mb-2">Informações Técnicas:</h3>
       <p className="whitespace-pre-wrap">{productDetails.technicalInformation}</p>
       <hr/>
-      <p>{productDetails.technicalData}</p>
+      <p>{productDetails.technicalData}</p> */}
+      <ProductTechInfo technicalInformation={productDetails.technicalInformation} technicalData={productDetails.technicalData} />
     </div>
   );
 }

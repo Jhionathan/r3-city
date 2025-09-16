@@ -24,7 +24,7 @@ export default function DescriptionSection({ nome, codprod }: DescriptionSection
                 alt={nome}
                 width={140}
                 height={140}
-                className="rounded-xl h-36 w-full object-contain group-hover:scale-110 transition-transform duration-700"
+                className="rounded-xl h-36 w-36 object-contain group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
               <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -95,7 +95,7 @@ export default function DescriptionSection({ nome, codprod }: DescriptionSection
 
           <DrawerFooter className="px-6 pb-6 pt-2">
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto w-full">
-              <Button 
+              {/* <Button 
                 asChild 
                 className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300"
               >
@@ -103,7 +103,7 @@ export default function DescriptionSection({ nome, codprod }: DescriptionSection
                   <ExternalLink className="w-4 h-4" />
                   Ver no Site
                 </Link>
-              </Button>
+              </Button> */}
               
               <DrawerClose asChild>
                 <Button 
