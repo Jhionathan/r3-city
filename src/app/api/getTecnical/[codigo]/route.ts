@@ -3,10 +3,10 @@ import getProductDetail from "@/lib/getProductDetail";
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { codigo: string } }
+  context: { params: Promise<{ codigo: string }> } 
 ) {
   try {
-    const { codigo } = await params;
+    const { codigo } = await context.params; 
     
     if (!codigo) {
       return Response.json({ error: "Código do produto é obrigatório" }, { status: 400 });
