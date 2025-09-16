@@ -2,8 +2,7 @@
 
 import ButtonUse from "@/app/components/ButtonOnClick";
 import Container from "@/app/components/Container";
-import { Button } from "@/components/ui/button";
-import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
+import DescriptionSection from "@/app/components/DescriptionSection";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
@@ -79,16 +78,10 @@ export default function Bathroom() {
                             products.map((item) => (
                                 <div
                                     key={item.id}
-                                    className="w-52 h-52 flex items-center justify-center gap-2 flex-col overflow-hidden border bg-white border-slate-200 p-1 rounded-md shadow-md"
+                                    className="w-52 h-[300px] flex items-center justify-center gap-2 flex-col overflow-hidden border bg-white border-slate-200 p-1 rounded-md shadow-md"
                                 >
-                                    <div className="h-36 overflow-hidden w-full flex items-center justify-center">
-                                        <Image
-                                            src={`https://r3suprimentos.agilecdn.com.br/${item.codprod}.jpg`}
-                                            alt={item.nome.toUpperCase()}
-                                            width={120}
-                                            height={120}
-                                            className="hover:scale-95 transition-all duration-500"
-                                        />
+                                    <div className="h-56 overflow-hidden w-full flex items-center justify-center">
+                                    <DescriptionSection nome={item.nome} codprod={item.codprod} />
                                     </div>
                                     <div className="h-14 w-full">
                                         <p className="text-slate-600 text-xs font-mono text-center">
